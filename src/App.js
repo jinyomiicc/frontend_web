@@ -55,7 +55,10 @@ const NavButton = styled.button`
 const App = () => {
   const [theme, setTheme] = useState('light');
   const mainRef = useRef(null);
-  const sectionIds = ['intro-section', 'skills-section', 'projects-section', 'about-section', 'contact-section'];
+  
+  // 🚨 수정: 섹션 ID 순서 변경 (Intro - About - Skills - Projects - Contact)
+  const sectionIds = ['intro-section', 'about-section', 'skills-section', 'projects-section', 'contact-section'];
+  
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
 
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
@@ -154,10 +157,11 @@ const App = () => {
           
           {/* Main Content: 기존 가로 스크롤 섹션들 */}
           <main ref={mainRef}>
+            {/* 🚨 수정: 컴포넌트 렌더링 순서 변경 */}
             <IntroSection data={personalData} id="intro-section" />
+            <AboutSection data={personalData} id="about-section" /> {/* 위치 변경 */}
             <SkillsSection data={skillsData} id="skills-section" />
             <ProjectsSection data={projectsData} id="projects-section" />
-            <AboutSection data={personalData} id="about-section" />
             <ContactSection data={personalData.contact} id="contact-section" />
           </main>
           

@@ -1,7 +1,6 @@
-import React from 'react'; // useRef는 더 이상 필요 없습니다.
+import React from 'react';
 import styled from 'styled-components';
 import ThemeToggle from './ThemeToggle';
-// import myPortfolioPdf from '../assets/fortpolio.pdf'; // 🚨 이 import는 제거합니다.
 
 const NavWrapper = styled.header`
   position: fixed;
@@ -105,13 +104,14 @@ const PrinterIcon = () => (
 );
 
 
-const Header = ({ currentSectionId, scrollToSection }) => { // scrollToSection은 App.js에서 계속 받습니다.
+const Header = ({ currentSectionId, scrollToSection }) => { 
 
+  // 🚨 수정된 섹션 순서: Intro - About - Skills - Projects - Contact
   const sections = [
     { id: 'intro-section', name: 'Intro' },
+    { id: 'about-section', name: 'About' },
     { id: 'skills-section', name: 'Skills' },
     { id: 'projects-section', name: 'Projects' },
-    { id: 'about-section', name: 'About' },
     { id: 'contact-section', name: 'Contact' },
   ];
 
@@ -121,7 +121,7 @@ const Header = ({ currentSectionId, scrollToSection }) => { // scrollToSection�
   };
 
   return (
-    <NavWrapper> {/* className="no-print"는 NavWrapper 자체에 @media print로 적용 */}
+    <NavWrapper> 
       <Logo>JM.DEV</Logo>
       <NavList>
         {sections.map((sec) => (
@@ -137,7 +137,7 @@ const Header = ({ currentSectionId, scrollToSection }) => { // scrollToSection�
       
       <ButtonGroup>
         <ThemeToggle />
-        <PrintButton onClick={handlePrint} title="포트폴리오 인쇄"> {/* handlePrint로 변경 */}
+        <PrintButton onClick={handlePrint} title="포트폴리오 인쇄"> 
           <PrinterIcon />
           인쇄
         </PrintButton>
