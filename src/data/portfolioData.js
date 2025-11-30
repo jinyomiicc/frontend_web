@@ -11,7 +11,7 @@ export const personalData = {
     contact: {
       phone: "010-7249-2924",
       email: "jinyou0406@naver.com",
-      github: "https://github.com/your_github_profile" // ✅ GitHub 프로필 URL을 여기에 입력하세요.
+      github: "https://github.com/jinyomiicc?tab=repositories" // ✅ GitHub 프로필 URL을 여기에 입력하세요.
     },
     education: {
       college: "인하공업전문대학 컴퓨터정보과 (2023.3 ~ 2026.2 평점 4.2/4.5)",
