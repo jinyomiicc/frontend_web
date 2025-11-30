@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SectionTitle = styled.h2`
-  font-size: 3em;
+  font-size: 4em;
   margin-bottom: 50px;
   color: ${({ theme }) => theme.primary};
 `;
@@ -11,8 +11,8 @@ const SectionTitle = styled.h2`
 const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  font-size: 1.2em;
+  gap: 30px;
+  font-size: 1.5em;
   text-align: center;
 `;
 
@@ -37,7 +37,7 @@ const ContactSection = ({ data }) => {
     
     return (
         <section id="contact-section">
-            <SectionTitle>연락 및 기타 (Contact)</SectionTitle>
+            <SectionTitle>Contact</SectionTitle>
             <ContactInfo>
                 <ContactItem>
                     📞 전화: {data.phone}

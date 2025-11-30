@@ -22,12 +22,16 @@ const ProjectsSection = ({ data }) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   if (!data) return <div>데이터 로딩 중...</div>;
+  
+  // 💡 수정: 배열의 복사본을 만들어 역순 정렬 (최신 프로젝트가 먼저 나옴)
+  const reversedProjects = [...data].reverse();
 
   return (
     <section id="projects-section">
       <SectionTitle>프로젝트 포트폴리오 (Projects)</SectionTitle>
       <ProjectList>
-        {data.map(project => (
+        {/* 🚨 수정: 역순 정렬된 배열(reversedProjects)을 사용 */}
+        {reversedProjects.map(project => (
           <ProjectCard 
             key={project.id} 
             project={project} 

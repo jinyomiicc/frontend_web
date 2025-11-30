@@ -2,7 +2,6 @@
 
 import React from 'react';
 import styled from 'styled-components';
-// 🚨 1. 사진 파일 임포트: 실제 이미지 경로와 파일명으로 수정하세요.
 import profileImage from '../assets/profile.jpg'; 
 
 // --- 스타일 컴포넌트 ---
@@ -17,14 +16,12 @@ const IntroContent = styled.div`
 `;
 
 const ProfileImage = styled.img`
-  /* 세로로 긴 타원형 모양 스타일 */
-  width: 250px; /* 가로 길이 */
-  height: 300px; /* 세로 길이 */
-  object-fit: cover; /* 이미지 비율 유지 */
+  width: 250px; 
+  height: 300px; 
+  object-fit: cover; 
   
-  /* 타원 모양 만들기: border-radius를 50% / 50%로 설정 */
   border-radius: 50% / 50%; 
-  border: 4px solid ${({ theme }) => theme.primary}; /* 테마 색상으로 테두리 */
+  border: 2px solid ${({ theme }) => theme.primary}; /* 테마 색상으로 테두리 */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 `;
 
