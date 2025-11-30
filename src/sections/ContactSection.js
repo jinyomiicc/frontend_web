@@ -46,7 +46,7 @@ const ContactSection = ({ data }) => {
                     📧 이메일: <a href={`mailto:${data.email}`}>{data.email}</a>
                 </ContactItem>
                 <ContactItem>
-                    💻 GitHub: <a href={data.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                    💻 GitHub: <a href={data.github} target="_blank" rel="noopener noreferrer">GitHub Address</a>
                 </ContactItem>
             </ContactInfo>
         </section>
